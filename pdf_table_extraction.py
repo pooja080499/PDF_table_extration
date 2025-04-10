@@ -633,6 +633,7 @@ class PDFTableExtractor:
                     col_letter = chr(65 + j)
                     if j >= 26:  # For columns beyond Z
                         col_letter = chr(64 + j//26) + chr(65 + j%26)
+
                     
                     worksheet.column_dimensions[col_letter].width = min(adjusted_width, 50)  # Cap width at 50
 
@@ -661,3 +662,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
